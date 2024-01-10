@@ -2,7 +2,7 @@
 
 //IMPLEMENTADO ||
 Console.WriteLine("Smartphone Nokia:");
-Smartphone nokia = new Nokia(numero: "123456789", modelo: "Modelo 1", imei: "111111111", memoria: 64);
+Smartphone nokia = new Nokia(numero: "12345678", modelo: "Modelo 1", imei: "11111111", memoria: 64);
 nokia.Ligar();
 nokia.InstalarAplicativo("WhatsApp");
 

@@ -16,22 +16,23 @@ namespace DesafioPOO.Models
             _modelo = modelo;
             _imei = imei;
             _memoria = memoria;
-        }
-
-        public string Modelo
+            //IMPLEMENTANDO ALGUMAS EXCEPTIONS PARA QUE O USUÁRIO NÃO DIGITE UM VALOR INAPROPRIÁDO ||
+            if (string.IsNullOrEmpty(numero))
             {
-                get { return _modelo; }
-            }
-            public string IMEI
+            throw new ArgumentException("O número do smartphone não pode ser vazio.", nameof(numero));
+            } else if(string.IsNullOrEmpty(modelo))
             {
-                get { return _imei; }
-            }
-            public int Memoria
+            throw new ArgumentException("O modelo do smartphone não pode ser vazio.", nameof(modelo));    
+            } else if(string.IsNullOrEmpty(imei))
             {
-                get { return _memoria; }
+            throw new ArgumentException("O IMEI do smartphone não pode ser vazio.", nameof(imei));
+            }   if (memoria <= 0)
+            {
+            throw new ArgumentException("A memória do smartphone deve ser um valor positivo.", nameof(memoria));
             }
 
-
+        } 
+        
         public void Ligar()
         {
             Console.WriteLine("Ligando...");
