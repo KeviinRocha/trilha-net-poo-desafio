@@ -12,10 +12,12 @@ namespace DesafioPOO.Models
         public Smartphone(string numero, string modelo, string imei, int memoria)
         {
             Numero = numero;
+            // TODO: Implementar as propriedades faltantes de acordo com o diagrama
             // IMPLEMENTADO||
             _modelo = modelo;
             _imei = imei;
             _memoria = memoria;
+            // TODO: Passar os parâmetros do construtor para as propriedades
             //IMPLEMENTANDO ALGUMAS EXCEPTIONS PARA QUE O USUÁRIO NÃO DIGITE UM VALOR INAPROPRIÁDO ||
             if (string.IsNullOrEmpty(numero))
             {
